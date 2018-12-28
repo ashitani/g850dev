@@ -1,2 +1,6 @@
 # g850dev
-PC-G850V development examples
+
+ポケコンPC-G850V の開発メモ（現在執筆中）のサンプルプログラムやツール類など
+です。
+
+
