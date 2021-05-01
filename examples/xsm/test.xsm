@@ -1,0 +1,9 @@
+import "g850.xsm";
+org 0x100;
+
+char[] hello = @"Hello, World"; //@をつけるとnull終端しない
+
+// メイン
+cls();
+put_text(&hello, 12,0,0);
+return;

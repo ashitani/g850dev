@@ -1,0 +1,25 @@
+// 参考： http://ver0.sakura.ne.jp/doc/pcg800iocs.html
+
+// 文字表示  A:文字　D:Y座標 E:X座標
+function put_char(A,D,E) = 0xbe5f; 
+// 文字表示  A:文字　B:文字数: D:Y座標 E:X座標
+function put_chars(A,B,D,E) = 0xbfee; 
+// 文字列表示　HL: 文字先頭アドレス　B: 文字数 D:Y座標 E:X座標
+function put_text(HL,B,D,E) = 0xbff1; 
+// パターン表示 HL:パターン先頭アドレス B: パターン長 D:Y座標 E:X座標
+function put_pattern(HL,B,D,E)=0xbfd0;
+// 上スクロール
+function scroll_up()=0xbfeb;
+// 下スクロール DE:位置
+function scroll_down(DE)=0xbe65;
+
+// キーコード獲得（入力待ちなし） Aキーコード  入力あればCy=1
+function get_key()=0xbe53;
+// キーコード獲得（入力待ちあり） Aキーコード
+function get_key_wait()=0xbcfd;
+//キーコードを文字に変換　Aキーコード
+function keycode_to_char(A)=0xbe56; 
+
+function cls() {
+    put_chars(0,144,0,0);
+}
